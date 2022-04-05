@@ -49,7 +49,13 @@ class App extends Component {
                      onPageChange={this.updateCurrentPage}
               />
             }/>
-            <Route path='/' exact element={<Books books={this.state.books}/>}/>
+            <Route path={"/"} exact element={
+              <Books markAsTaken={this.markBookAsTaken}
+                     onDelete={this.deleteBook}
+                     loadBooks={this.loadBooks}
+                     onPageChange={this.updateCurrentPage}
+              />
+            }/>
           </Routes>
         </main>
       </Router>
